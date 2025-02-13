@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+    color: black;
+    font-family: Intern;
+}
+body{
+    background-color: #ecff00;
+}
+
+@font-face {
+    font-family: Intern;
+    src: url(fonts/Intern.ttf);
+}
