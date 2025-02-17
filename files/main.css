@@ -4,10 +4,13 @@ h1{
     font-family: Intern;
     margin: 0 20px;
     font-size: 4.5vw;
+    animation-delay: 0.4s;
 }
 
 body{
     background-color: #ecff00;
+    margin: 20px;
+    font-family: Intern;
 }
 
 @font-face {
@@ -15,14 +18,113 @@ body{
     src: url(Intern.ttf);
 }
 
+@font-face {
+    font-family: Shafarik;
+    src: url(Shafarik.ttf);
+}
+
 .header-container {
     display: flex;
+    animation-delay: 0.2s;
     align-items: center;
     justify-content: center;
     gap: 20px; 
 }
 
-
 .radioactive-symbol {
     height: 5.5vw;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    .radioactive-symbol {
+        height: 10vw;
+    }
+    
+    .header-container{
+        gap: 10px;
+    }
+}
+
+* {
+    -webkit-user-select: none;  /* Safari */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* IE10+/Edge */
+    user-select: none;          /* Standard */
+}
+
+input, button {
+    display: block;
+    margin: 10px 0;
+}
+table {
+    width: 100%;
+    animation-delay: 1s;
+    border-collapse: collapse;
+    margin-top: 20px; }
+th, td { border: 1px solid black; padding: 8px; text-align: left; }
+
+input {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 0 auto;
+    display: block;
+    animation-delay: 0.8s;
+}
+
+label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 400px;
+    margin: 10px auto;
+    animation-delay: 0.6s;
+}
+button {
+    background-color: #ecff00;
+    font-family: Intern;
+    color: black;
+    padding: 10px 24px;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    display: block;
+}
+
+button:hover {
+    background-color: #d9e900;
+}
+
+button:active {
+    transform: scale(0.95);
+    background-color: #c6d500;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.shafarik{
+    font-family: Shafarik;
+    font-weight: bold;
+}
+
+.header-container, h1, label, input, button, table {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
 }

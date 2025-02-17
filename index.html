@@ -3,21 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="files/main.css">
-    <meta name="viewport" content="width=device-witdh, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kernfysica Rekenmachine</title>
 </head>
 <body>
+
+
     <div class="header-container">
     <img class="radioactive-symbol" height="100px" src="images/ISO_7010_W003.webp">
     <h1 style="margin: 0 20px;">Kernfysica Rekenmachine</h1>
     <img class="radioactive-symbol" height="100px" src="images/ISO_7010_W003.webp">
 </div>
 
+<label>A (Aantal nucleonen): <input type="number" id="aantalA"></label>
+<label>Z (Aantal protonen): <input type="number" id="aantalZ"></label>
+<label>Atoommassa: <input type="number" step="any" id="atoomMassa"></label>
+<button onclick="bereken()">Bereken</button>
 
-
-
-
-<script src="app.js"></script>
+<table id="resultaat">
+  <thead>
+    <tr>
+      <th>Eigenschap</th>
+      <th>Waarde</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+</div>
+<script src="files/logic.js"></script>
 <noscript>You need to enable JavaScript to view the full site.</noscript>
 
 
